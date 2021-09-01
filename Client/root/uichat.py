@@ -90,7 +90,9 @@ if app.ENABLE_CHATTING_WINDOW_RENEWAL:
 
 # Add below
 		if app.ENABLE_CHATTING_WINDOW_RENEWAL:
-			self.wndChatSettingOption = None
+			if self.wndChatSettingOption:
+				self.wndChatSettingOption.Close()
+				self.wndChatSettingOption = None
 
 ''' 7. '''
 # Search @ class ChatWindow.OpenChat
