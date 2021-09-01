@@ -1,0 +1,12 @@
+CHATTING_SETTING_ADD	Add tab
+CHATTING_SETTING_ADD_MAX	You cannot add any more.
+CHATTING_SETTING_CHANGE_TITLE_NAME	Would you like to save the name for this chat?
+CHATTING_SETTING_CHANGE_TITLE_NOT	The name of the general chat cannot be changed.
+CHATTING_SETTING_CLEAR_QUESTION	Reset?
+CHATTING_SETTING_DEL	Delete field
+CHATTING_SETTING_LANGUAGE_OFF	Off
+CHATTING_SETTING_LANGUAGE_ON	On
+CHATTING_SETTING_QUESTION_DESC_1	1. Set a message for EXP gained from killing monsters or lost EXP.
+CHATTING_SETTING_QUESTION_DESC_2	2. Set a message for dropped loot and earned Yang.
+CHATTING_SETTING_RETURN	Restore field
+CHATTING_SETTING_SETTING	Settings
