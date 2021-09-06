@@ -177,7 +177,7 @@ window = {
 					"image" : CHATTING_PATH + "chattingoption_sub_large_bg.sub",
 					"children" :
 					(
-						{ "name" : "chatting_setting_talking", "type" : "text", "x" : 0, "y" : 0, "text" : uiScriptLocale.CHATTING_SETTING_TALKING, "all_align":"center"	},
+						{ "name" : "chatting_setting_talking", "type" : "text", "x" : 0, "y" : 0, "text" : uiScriptLocale.CHATTING_SETTING_TALKING, "all_align":"center" },
 					),
 				},
 				## 파티
@@ -186,7 +186,7 @@ window = {
 					"image" : CHATTING_PATH + "chattingoption_sub_large_bg.sub",
 					"children" :
 					(
-						{ "name" : "chatting_setting_party", "type" : "text", "x" : 0, "y" : 0, "text" : uiScriptLocale.CHATTING_SETTING_PARTY, "all_align":"center"	},
+						{ "name" : "chatting_setting_party", "type" : "text", "x" : 0, "y" : 0, "text" : uiScriptLocale.CHATTING_SETTING_PARTY, "all_align":"center" },
 					),
 				},
 				## 길드
@@ -195,7 +195,7 @@ window = {
 					"image" : CHATTING_PATH + "chattingoption_sub_large_bg.sub",
 					"children" :
 					(
-						{ "name" : "chatting_setting_guild", "type" : "text", "x" : 0, "y" : 0, "text" : uiScriptLocale.CHATTING_SETTING_GUILD, "all_align":"center"	},
+						{ "name" : "chatting_setting_guild", "type" : "text", "x" : 0, "y" : 0, "text" : uiScriptLocale.CHATTING_SETTING_GUILD, "all_align":"center" },
 					),
 				},
 				## 외침
@@ -204,7 +204,7 @@ window = {
 					"image" : CHATTING_PATH + "chattingoption_sub_large_bg.sub",
 					"children" :
 					(
-						{ "name" : "chatting_setting_shout", "type" : "text", "x" : 0, "y" : 0, "text" : uiScriptLocale.CHATTING_SETTING_SHOUT, "all_align":"center"	},
+						{ "name" : "chatting_setting_shout", "type" : "text", "x" : 0, "y" : 0, "text" : uiScriptLocale.CHATTING_SETTING_SHOUT, "all_align":"center" },
 					),
 				},
 				## 시스템
@@ -213,7 +213,7 @@ window = {
 					"image" : CHATTING_PATH + "chattingoption_sub_large_bg.sub",
 					"children" :
 					(
-						{ "name" : "chatting_setting_info", "type" : "text", "x" : 0, "y" : 0, "text" : uiScriptLocale.CHATTING_SETTING_SYSTEM, "all_align":"center"	},
+						{ "name" : "chatting_setting_info", "type" : "text", "x" : 0, "y" : 0, "text" : uiScriptLocale.CHATTING_SETTING_SYSTEM, "all_align":"center" },
 					),
 				},
 				## 공지
@@ -222,7 +222,7 @@ window = {
 					"image" : CHATTING_PATH + "chattingoption_sub_large_bg.sub",
 					"children" :
 					(
-						{ "name" : "chatting_setting_notice", "type" : "text", "x" : 0, "y" : 0, "text" : uiScriptLocale.CHATTING_SETTING_NOTICE, "all_align":"center"	},
+						{ "name" : "chatting_setting_notice", "type" : "text", "x" : 0, "y" : 0, "text" : uiScriptLocale.CHATTING_SETTING_NOTICE, "all_align":"center" },
 					),
 				},
 				## 주사위 설정
@@ -231,7 +231,7 @@ window = {
 					"image" : "d:/ymir work/ui/chat/chattingoption_menu_bg.sub",
 					"children" :
 					(
-						{ "name" : "dice_setting", "type" : "text", "x" : 0, "y" : 0, "text" : uiScriptLocale.CHATTING_SETTING_DICE_SETTING, "all_align":"center"	},
+						{ "name" : "dice_setting", "type" : "text", "x" : 0, "y" : 0, "text" : uiScriptLocale.CHATTING_SETTING_DICE_SETTING, "all_align":"center" },
 					),
 				},
 				## 주사위
@@ -240,7 +240,7 @@ window = {
 					"image" : CHATTING_PATH + "chattingoption_sub_large_bg.sub",
 					"children" :
 					(
-						{ "name" : "chatting_setting_dice", "type" : "text", "x" : 0, "y" : 0, "text" : uiScriptLocale.CHATTING_SETTING_DICE, "all_align":"center"	},
+						{ "name" : "chatting_setting_dice", "type" : "text", "x" : 0, "y" : 0, "text" : uiScriptLocale.CHATTING_SETTING_DICE, "all_align":"center" },
 					),
 				},
 				## 시스템 세부설정
@@ -249,7 +249,7 @@ window = {
 					"image" : "d:/ymir work/ui/chat/chattingoption_menu_bg.sub",
 					"children" :
 					(
-						{ "name" : "system_setting", "type" : "text", "x" : 0, "y" : 0, "text" : uiScriptLocale.CHATTING_SETTING_DETAIL, "all_align":"center"	},
+						{ "name" : "system_setting", "type" : "text", "x" : 0, "y" : 0, "text" : uiScriptLocale.CHATTING_SETTING_DETAIL, "all_align":"center" },
 					),
 				},
 				## 경험치
@@ -258,7 +258,7 @@ window = {
 					"image" : CHATTING_PATH + "chattingoption_sub_large_bg.sub",
 					"children" :
 					(
-						{ "name" : "chatting_setting_exp", "type" : "text", "x" : 0, "y" : 0, "text" : uiScriptLocale.CHATTING_SETTING_EXP, "all_align":"center"	},
+						{ "name" : "chatting_setting_exp", "type" : "text", "x" : 0, "y" : 0, "text" : uiScriptLocale.CHATTING_SETTING_EXP, "all_align":"center" },
 					),
 				},
 				## 아이템
@@ -267,7 +267,7 @@ window = {
 					"image" : CHATTING_PATH + "chattingoption_sub_large_bg.sub",
 					"children" :
 					(
-						{ "name" : "chatting_setting_item", "type" : "text", "x" : 0, "y" : 0, "text" : uiScriptLocale.CHATTING_SETTING_ITEM, "all_align":"center"	},
+						{ "name" : "chatting_setting_item", "type" : "text", "x" : 0, "y" : 0, "text" : uiScriptLocale.CHATTING_SETTING_ITEM, "all_align":"center" },
 					),
 				},
 				## 재화
@@ -276,7 +276,7 @@ window = {
 					"image" : CHATTING_PATH + "chattingoption_sub_large_bg.sub",
 					"children" :
 					(
-						{ "name" : "chatting_setting_gold", "type" : "text", "x" : 0, "y" : 0, "text" : uiScriptLocale.CHATTING_SETTING_GOLD, "all_align":"center"	},
+						{ "name" : "chatting_setting_gold", "type" : "text", "x" : 0, "y" : 0, "text" : uiScriptLocale.CHATTING_SETTING_GOLD, "all_align":"center" },
 					),
 				},
 
