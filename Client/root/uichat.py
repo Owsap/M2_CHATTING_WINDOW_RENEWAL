@@ -4,8 +4,7 @@ if app.ENABLE_CHATTING_WINDOW_RENEWAL:
 	import os
 	import uiCommon
 	import uiScriptLocale
-	try: import cPickle as pickle
-	except (ImportError, TypeError): import pickle as pickle
+	import cPickle
 	import player
 
 ''' 2. '''
@@ -24,12 +23,14 @@ if app.ENABLE_CHATTING_WINDOW_RENEWAL:
 			imgChatBarLeft.LoadImage("d:/ymir work/ui/pattern/chat_bar_left.tga")
 			imgChatBarLeft.Show()
 			self.imgChatBarLeft = imgChatBarLeft
+
 			imgChatBarRight = ui.ImageBox()
 			imgChatBarRight.SetParent(self.btnChatSizing)
 			imgChatBarRight.AddFlag("not_pick")
 			imgChatBarRight.LoadImage("d:/ymir work/ui/pattern/chat_bar_right.tga")
 			imgChatBarRight.Show()
 			self.imgChatBarRight = imgChatBarRight
+
 			imgChatBarMiddle = ui.ExpandedImageBox()
 			imgChatBarMiddle.SetParent(self.btnChatSizing)
 			imgChatBarMiddle.AddFlag("not_pick")
@@ -129,6 +130,9 @@ if app.ENABLE_CHATTING_WINDOW_RENEWAL:
 
 # Add below
 		if app.ENABLE_CHATTING_WINDOW_RENEWAL:
+			self.btnChatTab = None
+			self.btnChatSettingOption = None
+
 			if self.wndChatSettingOption:
 				self.wndChatSettingOption.Close()
 				self.wndChatSettingOption = None
@@ -159,15 +163,14 @@ if app.ENABLE_CHATTING_WINDOW_RENEWAL:
 # Replace with
 		if app.ENABLE_CHATTING_WINDOW_RENEWAL:
 			self.imgChatBarLeft.SetPosition(0, 17)
-
 			self.imgChatBarRight.SetPosition(width - 57, 0)
+
+			self.imgChatBarMiddle.SetPosition(57.0, 0)
+			self.imgChatBarMiddle.SetRenderingRect(0.0, 0.0, float(width - 57.0 * 2) / 57.0 - 1.0, 0.0)
 
 			self.btnChatTab.SetTextAddPos(uiScriptLocale.CHATTING_SETTING_DEFAULT_TITLE, -2)
 			self.btnChatTab.SetPosition(4, 0)
 			self.btnChatSettingOption.SetPosition(width - 27, 3)
-
-			self.imgChatBarMiddle.SetPosition(57.0, 0)
-			self.imgChatBarMiddle.SetRenderingRect(0.0, 0.0, float(width - 57.0 * 2) / 57.0 - 1.0, 0.0)
 		else:
 			self.imgChatBarLeft.SetPosition(0, 0)
 			self.imgChatBarRight.SetPosition(width - 64, 0)
@@ -199,15 +202,13 @@ if app.ENABLE_CHATTING_WINDOW_RENEWAL:
 					self.wndChatSettingOption.Open()
 
 		def RefreshChatWindow(self):
-			if not self.wndChatSettingOption:
-				return
-
-			for mode in OPTION_CHECKBOX_MODE.iterkeys():
-				enable = self.wndChatSettingOption.GetChatModeSetting(mode)
-				if enable:
-					chat.EnableChatMode(self.chatID, mode)
-				else:
-					chat.DisableChatMode(self.chatID, mode)
+			if self.wndChatSettingOption:
+				for mode in OPTION_CHECKBOX_MODE.iterkeys():
+					enable = self.wndChatSettingOption.GetChatModeSetting(mode)
+					if enable:
+						chat.EnableChatMode(self.chatID, mode)
+					else:
+						chat.DisableChatMode(self.chatID, mode)
 
 ''' 12. '''
 # Search @ class ChatLogWindow.__init__
@@ -377,7 +378,8 @@ if app.ENABLE_CHATTING_WINDOW_RENEWAL:
 			ui.ScriptWindow.__init__(self)
 			self.isLoaded = False
 
-			self.parent = parent
+			from _weakref import proxy
+			self.parent = proxy(parent)
 			self.questionDialog = None
 
 			self.checkBoxSlotDict = {}
@@ -457,13 +459,12 @@ if app.ENABLE_CHATTING_WINDOW_RENEWAL:
 			self.Close()
 
 		def __GetChattingFile(self):
-			# Create the UserData/chatting path if it doesn't exist.
 			path = ["UserData", "chatting"]
 			try:
 				if not os.path.exists(os.getcwd() + os.sep + path[0] + os.sep + path[1]):
 					os.makedirs(os.getcwd() + os.sep + "UserData" + os.sep + "chatting")
 			except WindowsError as error: pass
-			return "%s/%s/%s" % (path[0], path[1], player.GetName()) # -_-'
+			return "%s/%s/%s" % (path[0], path[1], player.GetName())
 
 		def __LoadChattingOptionFile(self):
 			load = False
@@ -471,14 +472,14 @@ if app.ENABLE_CHATTING_WINDOW_RENEWAL:
 				fileName = self.__GetChattingFile()
 				file = open(fileName)
 				try:
+					#cPickle.dumps(file)
 					load = True
-					self.tmpCheckBoxSettingDict = pickle.load(file)
-				except (ValueError, EOFError, pickle.PicklingError, pickle.UnpicklingError): pass
+					self.tmpCheckBoxSettingDict = cPickle.load(file)
+				except (ValueError, EOFError, cPickle.PicklingError, cPickle.UnpicklingError): pass
 			except IOError: pass
 
 			for key in xrange(1, len(OPTION_CHECKBOX_MODE) + 1):
 				if not load:
-					# Default, always enable and add to dict.
 					value = True
 					self.tmpCheckBoxSettingDict[key] = True
 				else:
@@ -495,7 +496,7 @@ if app.ENABLE_CHATTING_WINDOW_RENEWAL:
 			try:
 				fileName = self.__GetChattingFile()
 				file = open(fileName, 'wb')
-				pickle.dump(self.tmpCheckBoxSettingDict, file)
+				cPickle.dump(self.tmpCheckBoxSettingDict, file)
 			except IOError:
 				return
 
@@ -506,7 +507,7 @@ if app.ENABLE_CHATTING_WINDOW_RENEWAL:
 			try:
 				fileName = self.__GetChattingFile()
 				file = open(fileName, 'wb')
-				pickle.dump(self.tmpCheckBoxSettingDict, file)
+				cPickle.dump(self.tmpCheckBoxSettingDict, file)
 			except IOError:
 				return
 
