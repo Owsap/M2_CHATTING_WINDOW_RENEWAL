@@ -1,80 +1,80 @@
 /*
 * CHAT_TYPE_EXP_INFO :
-*	"»óÀÚ¿¡¼­ ºÎÅÍ ½ÅºñÇÑ ºûÀÌ ³ª¿É´Ï´Ù."
-*	"%dÀÇ °æÇèÄ¡¸¦ È¹µæÇß½À´Ï´Ù."
+*	"ìƒìžì—ì„œ ë¶€í„° ì‹ ë¹„í•œ ë¹›ì´ ë‚˜ì˜µë‹ˆë‹¤."
+*	"%dì˜ ê²½í—˜ì¹˜ë¥¼ íšë“í–ˆìŠµë‹ˆë‹¤."
 *
 * CHAT_TYPE_ITEM_INFO :
-*	"¾ÆÀÌÅÛ È¹µæ: %s"
-*	"»óÀÚ¿¡¼­ %s °¡ %d °³ ³ª¿Ô½À´Ï´Ù."
-*	"»óÀÚ¿¡¼­ %s °¡ ³ª¿Ô½À´Ï´Ù."
+*	"ì•„ì´í…œ íšë“: %s"
+*	"ìƒìžì—ì„œ %s ê°€ %d ê°œ ë‚˜ì™”ìŠµë‹ˆë‹¤."
+*	"ìƒìžì—ì„œ %s ê°€ ë‚˜ì™”ìŠµë‹ˆë‹¤."
 *
 * CHAT_TYPE_MONEY_INFO :
-*	"µ· %d ³ÉÀ» È¹µæÇß½À´Ï´Ù."
+*	"ëˆ %d ëƒ¥ì„ íšë“í–ˆìŠµë‹ˆë‹¤."
 */
 
 /// 1.
 // Search all
-ChatPacket(CHAT_TYPE_INFO, LC_TEXT("µ· %d ³ÉÀ» È¹µæÇß½À´Ï´Ù."), dwCounts[i]);
+ChatPacket(CHAT_TYPE_INFO, LC_TEXT("ëˆ %d ëƒ¥ì„ íšë“í–ˆìŠµë‹ˆë‹¤."), dwCounts[i]);
 
 // Replace with
 #if defined(__CHATTING_WINDOW_RENEWAL__)
-ChatPacket(CHAT_TYPE_MONEY_INFO, LC_TEXT("µ· %d ³ÉÀ» È¹µæÇß½À´Ï´Ù."), dwCounts[i]);
+ChatPacket(CHAT_TYPE_MONEY_INFO, LC_TEXT("ëˆ %d ëƒ¥ì„ íšë“í–ˆìŠµë‹ˆë‹¤."), dwCounts[i]);
 #else
-ChatPacket(CHAT_TYPE_INFO, LC_TEXT("µ· %d ³ÉÀ» È¹µæÇß½À´Ï´Ù."), dwCounts[i]);
+ChatPacket(CHAT_TYPE_INFO, LC_TEXT("ëˆ %d ëƒ¥ì„ íšë“í–ˆìŠµë‹ˆë‹¤."), dwCounts[i]);
 #endif
 
 /// 2.
 // Search all
-ChatPacket(CHAT_TYPE_INFO, LC_TEXT("»óÀÚ¿¡¼­ ºÎÅÍ ½ÅºñÇÑ ºûÀÌ ³ª¿É´Ï´Ù."));
-ChatPacket(CHAT_TYPE_INFO, LC_TEXT("%dÀÇ °æÇèÄ¡¸¦ È¹µæÇß½À´Ï´Ù."), dwCounts[i]);
+ChatPacket(CHAT_TYPE_INFO, LC_TEXT("ìƒìžì—ì„œ ë¶€í„° ì‹ ë¹„í•œ ë¹›ì´ ë‚˜ì˜µë‹ˆë‹¤."));
+ChatPacket(CHAT_TYPE_INFO, LC_TEXT("%dì˜ ê²½í—˜ì¹˜ë¥¼ íšë“í–ˆìŠµë‹ˆë‹¤."), dwCounts[i]);
 
 // Replace with
 #if defined(__CHATTING_WINDOW_RENEWAL__)
-ChatPacket(CHAT_TYPE_EXP_INFO, LC_TEXT("»óÀÚ¿¡¼­ ºÎÅÍ ½ÅºñÇÑ ºûÀÌ ³ª¿É´Ï´Ù."));
-ChatPacket(CHAT_TYPE_EXP_INFO, LC_TEXT("%dÀÇ °æÇèÄ¡¸¦ È¹µæÇß½À´Ï´Ù."), dwCounts[i]);
+ChatPacket(CHAT_TYPE_EXP_INFO, LC_TEXT("ìƒìžì—ì„œ ë¶€í„° ì‹ ë¹„í•œ ë¹›ì´ ë‚˜ì˜µë‹ˆë‹¤."));
+ChatPacket(CHAT_TYPE_EXP_INFO, LC_TEXT("%dì˜ ê²½í—˜ì¹˜ë¥¼ íšë“í–ˆìŠµë‹ˆë‹¤."), dwCounts[i]);
 #else
-ChatPacket(CHAT_TYPE_INFO, LC_TEXT("»óÀÚ¿¡¼­ ºÎÅÍ ½ÅºñÇÑ ºûÀÌ ³ª¿É´Ï´Ù."));
-ChatPacket(CHAT_TYPE_INFO, LC_TEXT("%dÀÇ °æÇèÄ¡¸¦ È¹µæÇß½À´Ï´Ù."), dwCounts[i]);
+ChatPacket(CHAT_TYPE_INFO, LC_TEXT("ìƒìžì—ì„œ ë¶€í„° ì‹ ë¹„í•œ ë¹›ì´ ë‚˜ì˜µë‹ˆë‹¤."));
+ChatPacket(CHAT_TYPE_INFO, LC_TEXT("%dì˜ ê²½í—˜ì¹˜ë¥¼ íšë“í–ˆìŠµë‹ˆë‹¤."), dwCounts[i]);
 #endif
 
 /// 3.
 // Search all
-ChatPacket(CHAT_TYPE_INFO, LC_TEXT("¾ÆÀÌÅÛ È¹µæ: %s"), item2->GetName());
+ChatPacket(CHAT_TYPE_INFO, LC_TEXT("ì•„ì´í…œ íšë“: %s"), item->GetName());
 
 // Replace with
 #if defined(__CHATTING_WINDOW_RENEWAL__)
-ChatPacket(CHAT_TYPE_ITEM_INFO, LC_TEXT("¾ÆÀÌÅÛ È¹µæ: %s"), item->GetName());
+ChatPacket(CHAT_TYPE_ITEM_INFO, LC_TEXT("ì•„ì´í…œ íšë“: %s"), item->GetName());
 #else
-ChatPacket(CHAT_TYPE_INFO, LC_TEXT("¾ÆÀÌÅÛ È¹µæ: %s"), item->GetName());
+ChatPacket(CHAT_TYPE_INFO, LC_TEXT("ì•„ì´í…œ íšë“: %s"), item->GetName());
 #endif
 
 /// 4.
 // Search all
-ChatPacket(CHAT_TYPE_INFO, LC_TEXT("¾ÆÀÌÅÛ È¹µæ: %s"), item2->GetName());
+ChatPacket(CHAT_TYPE_INFO, LC_TEXT("ì•„ì´í…œ íšë“: %s"), item2->GetName());
 
 // Replace with
 #if defined(__CHATTING_WINDOW_RENEWAL__)
-ChatPacket(CHAT_TYPE_ITEM_INFO, LC_TEXT("¾ÆÀÌÅÛ È¹µæ: %s"), item2->GetName());
+ChatPacket(CHAT_TYPE_ITEM_INFO, LC_TEXT("ì•„ì´í…œ íšë“: %s"), item2->GetName());
 #else
-ChatPacket(CHAT_TYPE_INFO, LC_TEXT("¾ÆÀÌÅÛ È¹µæ: %s"), item2->GetName());
+ChatPacket(CHAT_TYPE_INFO, LC_TEXT("ì•„ì´í…œ íšë“: %s"), item2->GetName());
 #endif
 
 /// 5.
 // Search all
 if (dwCounts[i] > 1)
-	ChatPacket(CHAT_TYPE_INFO, LC_TEXT("»óÀÚ¿¡¼­ %s °¡ %d °³ ³ª¿Ô½À´Ï´Ù."), item_gets[i]->GetName(), dwCounts[i]);
+	ChatPacket(CHAT_TYPE_INFO, LC_TEXT("ìƒìžì—ì„œ %s ê°€ %d ê°œ ë‚˜ì™”ìŠµë‹ˆë‹¤."), item_gets[i]->GetName(), dwCounts[i]);
 else
-	ChatPacket(CHAT_TYPE_INFO, LC_TEXT("»óÀÚ¿¡¼­ %s °¡ ³ª¿Ô½À´Ï´Ù."), item_gets[i]->GetName());
+	ChatPacket(CHAT_TYPE_INFO, LC_TEXT("ìƒìžì—ì„œ %s ê°€ ë‚˜ì™”ìŠµë‹ˆë‹¤."), item_gets[i]->GetName());
 
 // Replace with
 #if defined(__CHATTING_WINDOW_RENEWAL__)
 if (dwCounts[i] > 1)
-	ChatPacket(CHAT_TYPE_ITEM_INFO, LC_TEXT("»óÀÚ¿¡¼­ %s °¡ %d °³ ³ª¿Ô½À´Ï´Ù."), item_gets[i]->GetName(), dwCounts[i]);
+	ChatPacket(CHAT_TYPE_ITEM_INFO, LC_TEXT("ìƒìžì—ì„œ %s ê°€ %d ê°œ ë‚˜ì™”ìŠµë‹ˆë‹¤."), item_gets[i]->GetName(), dwCounts[i]);
 else
-	ChatPacket(CHAT_TYPE_ITEM_INFO, LC_TEXT("»óÀÚ¿¡¼­ %s °¡ ³ª¿Ô½À´Ï´Ù."), item_gets[i]->GetName());
+	ChatPacket(CHAT_TYPE_ITEM_INFO, LC_TEXT("ìƒìžì—ì„œ %s ê°€ ë‚˜ì™”ìŠµë‹ˆë‹¤."), item_gets[i]->GetName());
 #else
 if (dwCounts[i] > 1)
-	ChatPacket(CHAT_TYPE_INFO, LC_TEXT("»óÀÚ¿¡¼­ %s °¡ %d °³ ³ª¿Ô½À´Ï´Ù."), item_gets[i]->GetName(), dwCounts[i]);
+	ChatPacket(CHAT_TYPE_INFO, LC_TEXT("ìƒìžì—ì„œ %s ê°€ %d ê°œ ë‚˜ì™”ìŠµë‹ˆë‹¤."), item_gets[i]->GetName(), dwCounts[i]);
 else
-	ChatPacket(CHAT_TYPE_INFO, LC_TEXT("»óÀÚ¿¡¼­ %s °¡ ³ª¿Ô½À´Ï´Ù."), item_gets[i]->GetName());
+	ChatPacket(CHAT_TYPE_INFO, LC_TEXT("ìƒìžì—ì„œ %s ê°€ ë‚˜ì™”ìŠµë‹ˆë‹¤."), item_gets[i]->GetName());
 #endif
